@@ -157,7 +157,7 @@ get_header(); ?>
                         </a>
                     </li>
                     <li class="mb-2"><span class="fa-li"><i class="fas fa-map-marker-alt fa-lg"></i></span>
-                        <a href="<?php the_field('enlace_de_google_maps'); ?>" target="_blank">
+                        <a href="<?php the_field('enlace_de_google_maps'); ?>" target="_blank" onClick="mapTracking();">
                             &nbsp; <?php the_field('direccion_pie_de_pagina'); ?>
                         </a>
                     </li>

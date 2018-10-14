@@ -508,17 +508,17 @@
                 <h6>Contacto</h6>
                 <ul class="fa-ul">
                     <li class="mb-2"><span class="fa-li"><i class="fas fa-phone fa-lg"></i></span>
-                        <a href="tel:<?php the_field('telefono'); ?>">
+                        <a href="tel:<?php the_field('telefono'); ?>" onClick="phoneTracking();">
                             &nbsp; <?php the_field('telefono'); ?>
                         </a>
                     </li>
                     <li class="mb-2"><span class="fa-li"><i class="fas fa-envelope fa-lg"></i></span>
-                        <a href="mailto:<?php the_field('correo'); ?>">
+                        <a href="mailto:<?php the_field('correo'); ?>" onClick="emailTracking();">
                             &nbsp; <?php the_field('correo'); ?>
                         </a>
                     </li>
                     <li class="mb-2"><span class="fa-li"><i class="fas fa-map-marker-alt fa-lg"></i></span>
-                        <a href="<?php the_field('enlace_de_google_maps'); ?>" target="_blank">
+                        <a href="<?php the_field('enlace_de_google_maps'); ?>" target="_blank" onClick="mapTracking();">
                             &nbsp; <?php the_field('direccion'); ?>
                         </a>
                     </li>
@@ -550,6 +550,26 @@ $(document).on("scroll", function () {
 $('#download-section').parallax({
     imageSrc: '<?php the_field('descarga_imagen'); ?>',
     position: 'center'
+});
+
+// TRACKING CODE
+// ------------------------------->
+$(document).ready(function() {
+	function mapTracking(){
+        gtag('js', new Date());
+        gtag('config', 'UA-121193876-5');
+        gtag('event', 'view_item', {
+            'event_category': 'Map',
+            'event_action': 'Direction Clicked',
+            'event_label': 'Footer Link'
+        });
+    }
+    function phoneTracking() {
+        fbq('track', 'Lead');
+    }
+    function emailTracking() {
+        fbq('track', 'Lead');
+    }
 });
 </script>
 

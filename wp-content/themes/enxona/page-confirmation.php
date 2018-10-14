@@ -41,6 +41,13 @@ get_header(); ?>
 </main>
 
 
+<script>
+$(document).ready(function() {
+	formFilled();
+});
+</script>
+
+
 <!-- FOOTER
 ================================================== -->
 <footer>
