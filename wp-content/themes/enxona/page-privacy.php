@@ -32,7 +32,7 @@ get_header(); ?>
 <main>
 <!-- PRIVACY POLICY
 ================================================== -->
-<section class="my-5 pt-5">
+<section class="my-5 pt-4">
     <div class="container">
         <div class="row justify-content-center mb-4">
             <div class="col-12 col-md-10">
@@ -44,8 +44,8 @@ get_header(); ?>
             <div class="col-12 col-md-10 col-lg-9">
                 <p>El sitio web ubicado en la dirección <a href="https://enxona.mx">https://enxona.mx</a>,
                     incluyendo cualquiera de sus subdominios o secciones (en adelante, el “Sitio Web”) está operado por
-                    EnXona Comercios & Servicios (en adelante "EnXona"), con domicilio comercial en Gustavo A. Vicencia #22, Col. Centro Xonacatlán. Xonacatlán, Estado de México. CP 52060, México.</p>
-                <p>El siguiente Aviso de Privacidad establece los términos en que <strong>EnXona</strong> usa y
+                    <?php the_field('nombre_fiscal'); ?> (en adelante "<?php the_field('nombre_comercial'); ?>"), con domicilio comercial en <?php the_field('direccion_comercial'); ?></p>
+                <p>El siguiente Aviso de Privacidad establece los términos en que <strong><?php the_field('nombre_comercial'); ?></strong> usa y
                     protege la información que es proporcionada por sus usuarios al momento de utilizar su sitio web.
                     Esta compañía está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos
                     llenar los campos de información personal con la cual usted pueda ser identificado, lo hacemos
@@ -56,7 +56,7 @@ get_header(); ?>
                 <p>El acceso y uso del Sitio Web suponen que el Usuario ha leído y acepta en su totalidad el presente
                     Aviso de Privacidad y Cookies. La fecha al inicio del presente Aviso de Privacidad y Cookies indica
                     la fecha de la última revisión del Aviso de Privacidad y Cookies, que será aplicable desde la fecha
-                    de su publicación. <strong>EnXona</strong> recomienda por tanto revisar el Aviso de Privacidad
+                    de su publicación. <strong><?php the_field('nombre_comercial'); ?></strong> recomienda por tanto revisar el Aviso de Privacidad
                     y Cookies regularmente.</p>
 
                 <h3 class="mt-3 text-blue">Información que es recogida</h3>
@@ -73,7 +73,7 @@ get_header(); ?>
                     que consideremos relevante para usted o que pueda brindarle algún beneficio, estos correos
                     electrónicos serán enviados a la dirección que usted proporcione y podrán ser cancelados en
                     cualquier momento.</p>
-                <p><strong>EnXona</strong> está altamente comprometido para cumplir con el compromiso de mantener
+                <p><strong><?php the_field('nombre_comercial'); ?></strong> está altamente comprometido para cumplir con el compromiso de mantener
                     su información segura. Usamos los sistemas más avanzados y los actualizamos constantemente para
                     asegurarnos que no exista ningún acceso no autorizado.</p>
 
@@ -107,17 +107,17 @@ get_header(); ?>
                     de alta de usuario, puede marcar o desmarcar la opción de recibir información por correo
                     electrónico. En caso de que haya marcado la opción de recibir nuestro boletín o publicidad usted
                     puede cancelarla en cualquier momento.</p>
-                <p><strong>EnXona</strong> no venderá, cederá ni distribuirá la información personal que es
+                <p><strong><?php the_field('nombre_comercial'); ?></strong> no venderá, cederá ni distribuirá la información personal que es
                     recopilada sin su consentimiento, salvo que sea requerido por un juez con un orden judicial.</p>
-                <p><strong>EnXona</strong> se reserva el derecho de cambiar los términos del presente Aviso de
+                <p><strong><?php the_field('nombre_comercial'); ?></strong> se reserva el derecho de cambiar los términos del presente Aviso de
                     Privacidad en cualquier momento.</p>
 
                 <h3 class="mt-3 text-blue">Propiedad intelectual</h3>
                 <p>El usuario, única y exclusivamente, puede utilizar el material que aparezca en este sitio web para
                     su uso personal y privado, quedando prohibido su uso con fines comerciales o para incurrir en
                     actividades ilícitas. Todos los derechos derivados de la propiedad intelectual están expresamente
-                    reservados por <strong>EnXona</strong>.</p>
-                <p class="mt-4"><strong>EnXona</strong> velará por el cumplimiento de las anteriores condiciones
+                    reservados por <strong><?php the_field('nombre_comercial'); ?></strong>.</p>
+                <p class="mt-4"><strong><?php the_field('nombre_comercial'); ?></strong> velará por el cumplimiento de las anteriores condiciones
                     como por la debida utilización de los contenidos presentados en sus páginas web, ejercitando todas
                     las acciones civiles y penales que le correspondan en el caso de infracción o incumplimiento de
                     estos derechos por parte del usuario.</p>
@@ -147,18 +147,18 @@ get_header(); ?>
                 <h6>Contacto</h6>
                 <ul class="fa-ul">
                     <li class="mb-2"><span class="fa-li"><i class="fas fa-phone fa-lg"></i></span>
-                        <a href="tel:7222678310">
-                            &nbsp; 722-267-8310
+                        <a href="tel:<?php the_field('telefono'); ?>">
+                            &nbsp; <?php the_field('telefono'); ?>
                         </a>
                     </li>
                     <li class="mb-2"><span class="fa-li"><i class="fas fa-envelope fa-lg"></i></span>
-                        <a href="mailto:contacto@enxona.mx">
-                            &nbsp; contacto@enxona.mx
+                        <a href="mailto:<?php the_field('correo'); ?>">
+                            &nbsp; <?php the_field('correo'); ?>
                         </a>
                     </li>
                     <li class="mb-2"><span class="fa-li"><i class="fas fa-map-marker-alt fa-lg"></i></span>
-                        <a href="https://goo.gl/maps/RuhPDs4WUuR2" target="_blank">
-                            &nbsp; Gustavo A. Vivencio #22, Col. Centro Xonacatlán <br>&nbsp; Estado de México. CP. 52060
+                        <a href="<?php the_field('enlace_de_google_maps'); ?>" target="_blank">
+                            &nbsp; <?php the_field('direccion_pie_de_pagina'); ?>
                         </a>
                     </li>
                 </ul>
