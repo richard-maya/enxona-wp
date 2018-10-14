@@ -32,7 +32,7 @@
     <div class="container">
         <div class="row justify-content-center mb-4">
             <div class="col-12 col-md-5">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/enxona-logo-white.png" alt="enxona-logo-directorio-comercial" class="img-fluid wow fadeIn">
+                <img src="<?php the_field('logo_principal'); ?>" alt="enxona-logo-directorio-comercial" class="img-fluid wow fadeIn">
             </div>
         </div>
         <div class="row justify-content-center d-none">
@@ -40,7 +40,7 @@
         </div>
         <div class="row justify-content-center mt-4">
             <div class="col-12 col-md-8">
-                <h2 class="text-center wow fadeInUp text-white" data-wow-delay="0.5s">Directorio de productos y servicios oficial de Xonacatlán.</h2>
+                <h2 class="text-center wow fadeInUp text-white" data-wow-delay="0.5s"><?php the_field('texto_principal'); ?></h2>
             </div>
         </div>
         <div class="row justify-content-center mt-4">
@@ -71,16 +71,16 @@
     <div class="container">
         <div class="row justify-content-center d-flex align-items-center">
             <div class="col-12 col-md-6 text-center text-md-left">
-                <h2 class="wow fadeInUp">Todo lo que estás buscando en un sólo lugar</h2>
-                <p class="wow fadeInUp" data-wow-delay="0.2s">Formamos la comunidad más grande de Xonacatlán con más de XX,XXX empresas y negocios afiliados.</p>
+                <h2 class="wow fadeInUp"><?php the_field('tag_line'); ?></h2>
+                <p class="wow fadeInUp" data-wow-delay="0.2s"><?php the_field('descripcion'); ?></p>
             </div>
             <div class="col-12 col-md-6 text-center">
                 <h3 class="mb-4 wow fadeInUp" data-wow-delay="0.4s">Descarga gratis la app</h3>
                 <div class="row justify-content-around">
-                    <a href="#">
+                    <a href="<?php the_field('enlace_android'); ?>">
                         <button class="btn btn-outline-white btn-circle wow fadeIn" data-wow-delay="0.6s"><i class="fab fa-android fa-4x mx-2 my-2"></i></button>
                     </a>
-                    <a href="#">
+                    <a href="<?php the_field('enlace_ios'); ?>">
                         <button class="btn btn-outline-white btn-circle px-3 wow fadeIn" data-wow-delay="0.6s"><i class="fab fa-apple fa-4x mx-2 my-2"></i></button>
                     </a>
                 </div>
@@ -96,26 +96,26 @@
     <div class="container">
         <div class="row">
             <div class="col text-center">
-                <h2 class="text-green wow fadeInUp">AUMENTA TUS VENTAS</h2>
+                <h2 class="text-green wow fadeInUp"><?php the_field('caracteristicas_titulo'); ?></h2>
             </div>
         </div>
         <div class="row justify-content-center mb-3">
             <div class="col-12 col-md-6 text-center">
-                <p class="text-green wow fadeInUp" data-wow-delay="0.2s">Únete a la comunidad EnXona y aumenta tus ventas con posicionamiento en internet y redes sociales.</p>
+                <p class="text-green wow fadeInUp" data-wow-delay="0.2s"><?php the_field('caracteristicas_descripcion'); ?></p>
             </div>
         </div>
         <div class="row justify-content-center mb-3">
             <div class="col-12 col-md-4 text-center">
-                <i class="fas fa-map-marker-alt fa-5x text-green mb-3 wow fadeIn"></i>
-                <h6 class="text-green wow fadeInUp" data-wow-delay="0.2s">Posicionamiento en internet</h6>
+                <p class="text-green wow fadeIn" style="font-size: 5rem;"><?php the_field('caracteristica_1_icono'); ?></p>
+                <h6 class="text-green wow fadeInUp" data-wow-delay="0.2s"><?php the_field('caracteristica_1_texto'); ?></h6>
             </div>
             <div class="col-12 col-md-4 text-center">
-                <i class="fas fa-mobile-alt fa-5x text-green mb-3 wow fadeIn"></i>
-                <h6 class="text-green wow fadeInUp" data-wow-delay="0.2s">Publicidad en medios digitales</h6>
+                <p class="text-green wow fadeIn" style="font-size: 5rem;"><?php the_field('caracteristica_2_icono'); ?></p>
+                <h6 class="text-green wow fadeInUp" data-wow-delay="0.2s"><?php the_field('caracteristica_2_texto'); ?></h6>
             </div>
             <div class="col-12 col-md-4 text-center">
-                <i class="fas fa-users fa-5x text-green mb-3 wow fadeIn"></i>
-                <h6 class="text-green wow fadeInUp" data-wow-delay="0.2s">Más de XXX usuarios diarios</h6>
+                <p class="text-green wow fadeIn" style="font-size: 5rem;"><?php the_field('caracteristica_3_icono'); ?></p>
+                <h6 class="text-green wow fadeInUp" data-wow-delay="0.2s"><?php the_field('caracteristica_3_texto'); ?></h6>
             </div>
         </div>
         <div class="row justify-content-center">
@@ -141,8 +141,8 @@
                 <div class="category-square category-square-green mb-3">
                     <div class="content d-flex align-items-center wow fadeIn">
                         <div class="text-center">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/restaurantes-cafeterias-xona.png" alt="restaurantes-cafeterias-xona" class="w-50">
-                            <h6>RESTAURANTES Y CAFETERÍAS</h6>
+                            <img src="<?php the_field('categoria_1_imagen'); ?>" alt="restaurantes-cafeterias-xona" class="w-50">
+                            <h6><?php the_field('categoria_1_texto'); ?></h6>
                         </div>
                     </div>
                 </div>
@@ -151,8 +151,8 @@
                 <div class="category-square category-square-aqua mb-3">
                     <div class="content d-flex align-items-center wow fadeIn">
                         <div class="text-center">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/salones-banquetes-xona.png" alt="salones-banquetes-xona" class="w-50">
-                            <h6>SALONES Y BANQUETES</h6>
+                            <img src="<?php the_field('categoria_2_imagen'); ?>" alt="salones-banquetes-xona" class="w-50">
+                            <h6><?php the_field('categoria_2_texto'); ?></h6>
                         </div>
                     </div>
                 </div>
@@ -161,8 +161,8 @@
                 <div class="category-square category-square-blue mb-3">
                     <div class="content d-flex align-items-center wow fadeIn">
                         <div class="text-center">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/centros-educativos.png" alt="centros-educativos" class="w-50">
-                            <h6>CENTROS EDUCATIVOS</h6>
+                            <img src="<?php the_field('categoria_3_imagen'); ?>" alt="centros-educativos" class="w-50">
+                            <h6><?php the_field('categoria_3_texto'); ?></h6>
                         </div>
                     </div>
                 </div>
@@ -171,8 +171,8 @@
                 <div class="category-square category-square-pink mb-3">
                     <div class="content d-flex align-items-center wow fadeIn">
                         <div class="text-center">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/gimnasios-xona.png" alt="gimnasios-xona" class="w-50">
-                            <h6>GIMNASIOS</h6>
+                            <img src="<?php the_field('categoria_4_imagen'); ?>" alt="gimnasios-xona" class="w-50">
+                            <h6><?php the_field('categoria_4_texto'); ?></h6>
                         </div>
                     </div>
                 </div>
@@ -181,8 +181,8 @@
                 <div class="category-square category-square-orange mb-3">
                     <div class="content d-flex align-items-center wow fadeIn">
                         <div class="text-center">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/servicios-profesionales-xona.png" alt="servicios-profesionales-xona" class="w-50 mb-2">
-                            <h6>SERVICIOS PROFESIONALES</h6>
+                            <img src="<?php the_field('categoria_5_imagen'); ?>" alt="servicios-profesionales-xona" class="w-50 mb-2">
+                            <h6><?php the_field('categoria_5_texto'); ?></h6>
                         </div>
                     </div>
                 </div>
@@ -194,8 +194,8 @@
                 <div class="category-square category-square-green mb-3">
                     <div class="content d-flex align-items-center wow fadeIn">
                         <div class="text-center">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/servicios-medicos-xona.png" alt="servicios-medicos-xona" class="w-50 mb-2">
-                            <h6>SERVICIOS MÉDICOS</h6>
+                            <img src="<?php the_field('categoria_6_imagen'); ?>" alt="servicios-medicos-xona" class="w-50 mb-2">
+                            <h6><?php the_field('categoria_6_texto'); ?></h6>
                         </div>
                     </div>
                 </div>
@@ -204,8 +204,8 @@
                 <div class="category-square category-square-aqua mb-3">
                     <div class="content d-flex align-items-center wow fadeIn">
                         <div class="text-center">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/odontologo-xona.png" alt="odontologo-xona" class="w-50 mb-2">
-                            <h6>ODONTÓLOGOS</h6>
+                            <img src="<?php the_field('categoria_7_imagen'); ?>" alt="odontologo-xona" class="w-50 mb-2">
+                            <h6><?php the_field('categoria_7_texto'); ?></h6>
                         </div>
                     </div>
                 </div>
@@ -214,8 +214,8 @@
                 <div class="category-square category-square-blue mb-3">
                     <div class="content d-flex align-items-center wow fadeIn">
                         <div class="text-center">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/centros-comerciales.png" alt="centros-comerciales" class="w-50 mb-2">
-                            <h6>CENTROS COMERCIALES</h6>
+                            <img src="<?php the_field('categoria_8_imagen'); ?>" alt="centros-comerciales" class="w-50 mb-2">
+                            <h6><?php the_field('categoria_8_texto'); ?></h6>
                         </div>
                     </div>
                 </div>
@@ -224,8 +224,8 @@
                 <div class="category-square category-square-pink mb-3">
                     <div class="content d-flex align-items-center wow fadeIn">
                         <div class="text-center">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/servicio-automotriz-xona.png" alt="servicio-automotriz-xona" class="w-50">
-                            <h6>SERVICIO AUTOMOTRÍZ</h6>
+                            <img src="<?php the_field('categoria_9_imagen'); ?>" alt="servicio-automotriz-xona" class="w-50">
+                            <h6><?php the_field('categoria_9_texto'); ?></h6>
                         </div>
                     </div>
                 </div>
@@ -234,8 +234,8 @@
                 <div class="category-square category-square-orange mb-3">
                     <div class="content d-flex align-items-center wow fadeIn">
                         <div class="text-center">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/tiendas-peluche-xona.png" alt="tiendas-peluche-xona" class="w-50 mb-2">
-                            <h6>TIENDAS DE PELUCHES</h6>
+                            <img src="<?php the_field('categoria_10_imagen'); ?>" alt="tiendas-peluche-xona" class="w-50 mb-2">
+                            <h6><?php the_field('categoria_10_texto'); ?></h6>
                         </div>
                     </div>
                 </div>
@@ -247,8 +247,8 @@
                 <div class="category-square category-square-green mb-3">
                     <div class="content d-flex align-items-center wow fadeIn">
                         <div class="text-center">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/telas-para-peluches-xona.png" alt="telas-para-peluches-xona" class="w-50">
-                            <h6>TELAS PARA PELUCHES</h6>
+                            <img src="<?php the_field('categoria_11_imagen'); ?>" alt="telas-para-peluches-xona" class="w-50">
+                            <h6><?php the_field('categoria_11_texto'); ?></h6>
                         </div>
                     </div>
                 </div>
@@ -257,8 +257,8 @@
                 <div class="category-square category-square-aqua mb-3">
                     <div class="content d-flex align-items-center wow fadeIn">
                         <div class="text-center">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/pasteleria-xona.png" alt="pasteleria-xona" class="w-50 mb-2">
-                            <h6>PASTELERÍAS</h6>
+                            <img src="<?php the_field('categoria_12_imagen'); ?>" alt="pasteleria-xona" class="w-50 mb-2">
+                            <h6><?php the_field('categoria_12_texto'); ?></h6>
                         </div>
                     </div>
                 </div>
@@ -267,8 +267,8 @@
                 <div class="category-square category-square-blue mb-3">
                     <div class="content d-flex align-items-center wow fadeIn">
                         <div class="text-center">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/papeleria-xona.png" alt="papeleria-xona" class="w-50 mb-2">
-                            <h6>PAPELERÍAS</h6>
+                            <img src="<?php the_field('categoria_13_imagen'); ?>" alt="papeleria-xona" class="w-50 mb-2">
+                            <h6><?php the_field('categoria_13_texto'); ?></h6>
                         </div>
                     </div>
                 </div>
@@ -277,8 +277,8 @@
                 <div class="category-square category-square-pink mb-3">
                     <div class="content d-flex align-items-center wow fadeIn">
                         <div class="text-center">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/veterinaria-xona.png" alt="veterinaria-xona" class="w-50 mb-2">
-                            <h6>VETERINARÍAS</h6>
+                            <img src="<?php the_field('categoria_14_imagen'); ?>" alt="veterinaria-xona" class="w-50 mb-2">
+                            <h6><?php the_field('categoria_14_texto'); ?></h6>
                         </div>
                     </div>
                 </div>
@@ -287,8 +287,61 @@
                 <div class="category-square category-square-orange mb-3">
                     <div class="content d-flex align-items-center wow fadeIn">
                         <div class="text-center">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/estetica-canina.png" alt="estetica-canina" class="w-50">
-                            <h6>ESTÉTICA CANINA</h6>
+                            <img src="<?php the_field('categoria_15_imagen'); ?>" alt="estetica-canina" class="w-50">
+                            <h6><?php the_field('categoria_15_texto'); ?></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-xl-12 d-none d-xl-flex"></div>
+
+            <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+                <div class="category-square category-square-green mb-3">
+                    <div class="content d-flex align-items-center wow fadeIn">
+                        <div class="text-center">
+                            <img src="<?php the_field('categoria_16_imagen'); ?>" alt="telas-para-peluches-xona" class="w-50">
+                            <h6><?php the_field('categoria_16_texto'); ?></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+                <div class="category-square category-square-aqua mb-3">
+                    <div class="content d-flex align-items-center wow fadeIn">
+                        <div class="text-center">
+                            <img src="<?php the_field('categoria_17_imagen'); ?>" alt="pasteleria-xona" class="w-50 mb-2">
+                            <h6><?php the_field('categoria_17_texto'); ?></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+                <div class="category-square category-square-blue mb-3">
+                    <div class="content d-flex align-items-center wow fadeIn">
+                        <div class="text-center">
+                            <img src="<?php the_field('categoria_18_imagen'); ?>" alt="papeleria-xona" class="w-50 mb-2">
+                            <h6><?php the_field('categoria_18_texto'); ?></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+                <div class="category-square category-square-pink mb-3">
+                    <div class="content d-flex align-items-center wow fadeIn">
+                        <div class="text-center">
+                            <img src="<?php the_field('categoria_19_imagen'); ?>" alt="veterinaria-xona" class="w-50 mb-2">
+                            <h6><?php the_field('categoria_19_texto'); ?></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+                <div class="category-square category-square-orange mb-3">
+                    <div class="content d-flex align-items-center wow fadeIn">
+                        <div class="text-center">
+                            <img src="<?php the_field('categoria_20_imagen'); ?>" alt="estetica-canina" class="w-50">
+                            <h6><?php the_field('categoria_20_texto'); ?></h6>
                         </div>
                     </div>
                 </div>
@@ -304,33 +357,33 @@
     <div class="container">
         <div class="row">
             <div class="col text-center">
-                <h2 class="text-blue mb-2 wow fadeInUp">EMPRESAS ENXONA</h2>
+                <h2 class="text-blue mb-2 wow fadeInUp"><?php the_field('clientes_titulo'); ?></h2>
             </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-6 col-md-4 col-lg-3">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/enxona-logo.png" alt="enxona-logo-directorio-comercial" class="img-fluid mb-4 wow fadeIn">
+                <img src="<?php the_field('cliente_1'); ?>" alt="enxona-logo-directorio-comercial" class="img-fluid mb-4 wow fadeIn">
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/enxona-logo.png" alt="enxona-logo-directorio-comercial" class="img-fluid mb-4 wow fadeIn">
+                <img src="<?php the_field('cliente_2'); ?>" alt="enxona-logo-directorio-comercial" class="img-fluid mb-4 wow fadeIn">
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/enxona-logo.png" alt="enxona-logo-directorio-comercial" class="img-fluid mb-4 wow fadeIn">
+                <img src="<?php the_field('cliente_3'); ?>" alt="enxona-logo-directorio-comercial" class="img-fluid mb-4 wow fadeIn">
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/enxona-logo.png" alt="enxona-logo-directorio-comercial" class="img-fluid mb-4 wow fadeIn">
+                <img src="<?php the_field('cliente_4'); ?>" alt="enxona-logo-directorio-comercial" class="img-fluid mb-4 wow fadeIn">
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/enxona-logo.png" alt="enxona-logo-directorio-comercial" class="img-fluid mb-4 wow fadeIn">
+                <img src="<?php the_field('cliente_5'); ?>" alt="enxona-logo-directorio-comercial" class="img-fluid mb-4 wow fadeIn">
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/enxona-logo.png" alt="enxona-logo-directorio-comercial" class="img-fluid mb-4 wow fadeIn">
+                <img src="<?php the_field('cliente_6'); ?>" alt="enxona-logo-directorio-comercial" class="img-fluid mb-4 wow fadeIn">
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/enxona-logo.png" alt="enxona-logo-directorio-comercial" class="img-fluid mb-4 wow fadeIn">
+                <img src="<?php the_field('cliente_7'); ?>" alt="enxona-logo-directorio-comercial" class="img-fluid mb-4 wow fadeIn">
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/enxona-logo.png" alt="enxona-logo-directorio-comercial" class="img-fluid mb-4 wow fadeIn">
+                <img src="<?php the_field('cliente_8'); ?>" alt="enxona-logo-directorio-comercial" class="img-fluid mb-4 wow fadeIn">
             </div>
         </div>
     </div>
@@ -343,8 +396,8 @@
     <div class="container">
         <div class="row">
             <div class="col text-center">
-                <h2 class="text-blue wow fadeInUp">CONTÁCTANOS</h2>
-                <p class="text-blue wow fadeInUp" data-wow-delay="0.2s">¿Te interesa formar parte de la comunidad EnXona? <br>Déjanos tus datos y nos comunicaremos contigo.</p>
+                <h2 class="text-blue wow fadeInUp"><?php the_field('contacto_titulo'); ?></h2>
+                <p class="text-blue wow fadeInUp" data-wow-delay="0.2s"><?php the_field('contacto_descripcion'); ?></p>
             </div>
         </div>
         <div class="row justify-content-center">
@@ -455,18 +508,18 @@
                 <h6>Contacto</h6>
                 <ul class="fa-ul">
                     <li class="mb-2"><span class="fa-li"><i class="fas fa-phone fa-lg"></i></span>
-                        <a href="tel:7222678310">
-                            &nbsp; 722-267-8310
+                        <a href="tel:<?php the_field('telefono'); ?>">
+                            &nbsp; <?php the_field('telefono'); ?>
                         </a>
                     </li>
                     <li class="mb-2"><span class="fa-li"><i class="fas fa-envelope fa-lg"></i></span>
-                        <a href="mailto:contacto@enxona.mx">
-                            &nbsp; contacto@enxona.mx
+                        <a href="mailto:<?php the_field('correo'); ?>">
+                            &nbsp; <?php the_field('correo'); ?>
                         </a>
                     </li>
                     <li class="mb-2"><span class="fa-li"><i class="fas fa-map-marker-alt fa-lg"></i></span>
-                        <a href="https://goo.gl/maps/RuhPDs4WUuR2" target="_blank">
-                            &nbsp; Gustavo A. Vivencio #22, Col. Centro Xonacatlán <br>&nbsp; Estado de México. CP. 52060
+                        <a href="<?php the_field('enlace_de_google_maps'); ?>" target="_blank">
+                            &nbsp; <?php the_field('direccion'); ?>
                         </a>
                     </li>
                 </ul>
@@ -490,6 +543,13 @@ $(document).on("scroll", function () {
     } else {
         $(".navbar").removeClass("navbar-down");
     }
+});
+
+// PARALLAX
+// ------------------------------->
+$('#download-section').parallax({
+    imageSrc: '<?php the_field('descarga_imagen'); ?>',
+    position: 'center'
 });
 </script>
 

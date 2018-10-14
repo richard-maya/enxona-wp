@@ -63,10 +63,6 @@
     <meta name="author" content="Iconica Studio">
     <meta name="designer" content="Richard Maya">
 
-    <!-- STYLESHEETS
-    ================================================== -->
-    <link rel="stylesheet" href="scss/enxona.css">
-
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
